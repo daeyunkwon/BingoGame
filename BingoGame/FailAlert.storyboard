@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Fail View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="failAlert" id="Y6W-OH-hqX" customClass="FailViewController" customModule="BingoGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="정답은?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="47o-Q3-6ed">
+                                <rect key="frame" x="140" y="181" width="113" height="34"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WIl-cW-x3K">
+                                <rect key="frame" x="16" y="672" width="361" height="38"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="다시 도전하기">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="restartButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="eR3-MK-Ubn"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MNT-vj-sSb">
+                                <rect key="frame" x="178" y="270" width="37" height="41"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <color key="textColor" systemColor="systemYellowColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아쉽군요😭 다시 도전해보세요!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bUW-AQ-QMG">
+                                <rect key="frame" x="75" y="611" width="242" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" red="0.41176470590000003" green="0.60843132420000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="WIl-cW-x3K" secondAttribute="bottom" constant="108" id="3sE-ia-86D"/>
+                            <constraint firstItem="WIl-cW-x3K" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="BCf-Ot-JzO"/>
+                            <constraint firstItem="bUW-AQ-QMG" firstAttribute="top" secondItem="MNT-vj-sSb" secondAttribute="bottom" constant="300" id="Dsn-ol-Vh9"/>
+                            <constraint firstItem="MNT-vj-sSb" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="178" id="HMG-eI-hpf"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="MNT-vj-sSb" secondAttribute="trailing" constant="178" id="Zmp-vr-hog"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="WIl-cW-x3K" secondAttribute="trailing" constant="16" id="j1C-i8-Eq8"/>
+                            <constraint firstItem="47o-Q3-6ed" firstAttribute="trailing" secondItem="5EZ-qb-Rvc" secondAttribute="trailing" constant="-140" id="jzt-UX-tiy"/>
+                            <constraint firstItem="47o-Q3-6ed" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="140" id="kcm-Tm-eY3"/>
+                            <constraint firstItem="bUW-AQ-QMG" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="75" id="lHm-OR-StQ"/>
+                            <constraint firstItem="MNT-vj-sSb" firstAttribute="top" secondItem="47o-Q3-6ed" secondAttribute="bottom" constant="55" id="pk0-xA-34d"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="bUW-AQ-QMG" secondAttribute="trailing" constant="76" id="s07-pM-9Lb"/>
+                            <constraint firstItem="WIl-cW-x3K" firstAttribute="top" secondItem="bUW-AQ-QMG" secondAttribute="bottom" constant="40" id="u9j-zS-Scu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="randomValueLabel" destination="MNT-vj-sSb" id="muN-b4-uf2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="91" y="-28"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

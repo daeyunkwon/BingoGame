@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Success View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="successAlert" id="Y6W-OH-hqX" customClass="SuccessViewController" customModule="BingoGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="정답은?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ufv-tO-L2l">
+                                <rect key="frame" x="140" y="181" width="113" height="34"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sly-dc-yFl">
+                                <rect key="frame" x="16" y="672" width="361" height="38"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="한번 더 하기">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="restartButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ASm-fx-qng"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kLB-MK-RsH">
+                                <rect key="frame" x="178" y="270" width="37" height="41"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <color key="textColor" systemColor="systemYellowColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="정답을 맞추셨군요! 축하합니다🥳" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C98-CO-j0S">
+                                <rect key="frame" x="70" y="611" width="253" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" red="0.41176470590000003" green="0.60843132420000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="kLB-MK-RsH" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="178" id="4OD-mD-6JC"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Sly-dc-yFl" secondAttribute="bottom" constant="108" id="EmN-hS-nX1"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="kLB-MK-RsH" secondAttribute="trailing" constant="178" id="K7T-Ax-Faf"/>
+                            <constraint firstItem="Sly-dc-yFl" firstAttribute="top" secondItem="C98-CO-j0S" secondAttribute="bottom" constant="40" id="Ovz-da-Sva"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="C98-CO-j0S" secondAttribute="trailing" constant="70" id="TTu-7K-zF9"/>
+                            <constraint firstItem="C98-CO-j0S" firstAttribute="top" secondItem="kLB-MK-RsH" secondAttribute="bottom" constant="300" id="Ubd-qa-J4d"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Ufv-tO-L2l" secondAttribute="trailing" constant="140" id="YFE-TH-hEo"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Sly-dc-yFl" secondAttribute="trailing" constant="16" id="YZ9-Vf-faY"/>
+                            <constraint firstItem="Ufv-tO-L2l" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="140" id="bbY-9r-8GV"/>
+                            <constraint firstItem="C98-CO-j0S" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="70" id="f5c-W5-IPL"/>
+                            <constraint firstItem="kLB-MK-RsH" firstAttribute="top" secondItem="Ufv-tO-L2l" secondAttribute="bottom" constant="55" id="khO-xF-AFG"/>
+                            <constraint firstItem="Sly-dc-yFl" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="wZV-pJ-foE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="randomValueLabel" destination="kLB-MK-RsH" id="Lip-oH-wnD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="90.839694656488547" y="-28.169014084507044"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
